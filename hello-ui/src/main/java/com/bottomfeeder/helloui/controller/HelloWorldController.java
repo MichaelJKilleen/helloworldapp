@@ -12,12 +12,14 @@ public class HelloWorldController {
 
     public static final String FOO_RESOURCE_URL = "http://localhost:8082/rest/service/greeting";
 
+    public static final String CLASSIC_MODELS_RESOURCE_URL = "http://localhost:8082/classicmodels/customer";
+
     @RequestMapping(value = "/index")
     public String index(Model model) {
         RestTemplate restTemplate = new RestTemplate();
 
         ResponseEntity<String> response
-                = restTemplate.getForEntity(FOO_RESOURCE_URL, String.class);
+                = restTemplate.getForEntity(CLASSIC_MODELS_RESOURCE_URL, String.class);
 
         model.addAttribute("greeting",response.getBody());
 

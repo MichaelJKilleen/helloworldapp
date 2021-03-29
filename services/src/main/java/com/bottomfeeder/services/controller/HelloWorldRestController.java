@@ -24,7 +24,7 @@ public class HelloWorldRestController {
                 = restTemplate.getForEntity("http://localhost:8083/persist/billionares", BillionareDTO[].class);
 
         BillionareDTO[] data = response.getBody();
-        return ok(data[0].getFirstName());
+        return ok(data[1].getFirstName());
 
     }
 }
