@@ -21,8 +21,21 @@ public class HelloWorldController {
         ResponseEntity<String> response
                 = restTemplate.getForEntity(CLASSIC_MODELS_RESOURCE_URL, String.class);
 
-        model.addAttribute("greeting",response.getBody());
+        model.addAttribute("greeting", response.getBody());
 
         return "index";
     }
+
+    @RequestMapping(value = "/greeting")
+    public String greeting(Model model) {
+        RestTemplate restTemplate = new RestTemplate();
+
+        ResponseEntity<String> response
+                = restTemplate.getForEntity(FOO_RESOURCE_URL, String.class);
+
+        model.addAttribute("greeting", response.getBody());
+
+        return "index";
+    }
+
 }

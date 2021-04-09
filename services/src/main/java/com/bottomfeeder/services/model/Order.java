@@ -1,4 +1,4 @@
-package com.bottomfeeder.persist.model;
+package com.bottomfeeder.services.model;
 
 import java.sql.Timestamp;
 import java.util.Date;

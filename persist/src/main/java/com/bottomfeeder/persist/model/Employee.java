@@ -2,7 +2,7 @@ package com.bottomfeeder.persist.model;
 
 import java.sql.Timestamp;
 
-public class EmployeeDto {
+public class Employee {
     private Integer employee_number;
     private String created_by;
     private Timestamp created_date;

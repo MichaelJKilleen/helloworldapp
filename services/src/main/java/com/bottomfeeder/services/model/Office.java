@@ -1,8 +1,8 @@
-package com.bottomfeeder.persist.model;
+package com.bottomfeeder.services.model;
 
 import java.sql.Timestamp;
 
-public class OfficeDto {
+public class Office {
     private String office_code;
     private String created_by;
     private Timestamp created_date;
